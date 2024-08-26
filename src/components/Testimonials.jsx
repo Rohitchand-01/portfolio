@@ -16,7 +16,6 @@ const Testimonials = () => {
     const y2 = useTransform(scrollY, [0, 4500], [2000, 0], { clamp: false });
     return (
         <div className="w-full py-[50px] md:py-[100px] bg-white relative overflow-hidden">
-            {/* BACKGROUND ELEMENTS START */}
             <span className="sec-2-bg-gradient" />
             <motion.img
                 className="sec-4-p-e-1 rellax"
@@ -28,10 +27,9 @@ const Testimonials = () => {
                 style={{ y: y2 }}
                 src={pe2}
             />
-            {/* BACKGROUND ELEMENTS END */}
 
             <Wrapper>
-                {/* SECTION HEADING START */}
+              
                 <Div className="mb-10 relative">
                     <div className="flex text-center justify-center gap-2 md:gap-0 md:flex-col text-[40px] md:text-[90px] 2xl:text-[120px] leading-[40px] md:leading-[95px] 2xl:leading-[123px] font-oswald uppercase mb-2 text-[#111111]">
                         Client Says
@@ -40,12 +38,8 @@ const Testimonials = () => {
                     Although I do not have prior experience in an office setting, I am eager to leverage my strong skills and adaptability to contribute effectively in a professional environment.
                     </div>
                 </Div>
-                {/* SECTION HEADING END */}
-
-                {/* CAROUSEL START */}
                 <Div className="bg-[#F2F2F2] w-full md:w-[834px] rounded-[20px] mx-auto relative mb-[50px]">
                     <Carousel>
-                        {/* SLIDE START */}
                         <div className="text-black flex items-center flex-col px-[25px] md:px-[50px] py-[50px]">
                             <div className="mb-[25px]">
                                 <img
@@ -68,8 +62,6 @@ const Testimonials = () => {
                                 dolore eu fugiat nulla pariatur.
                             </div>
                         </div>
-                        {/* SLIDE END */}
-                        {/* SLIDE START */}
                         <div className="text-black flex items-center flex-col px-[25px] md:px-[50px] py-[50px]">
                             <div className="mb-[25px]">
                                 <img
@@ -92,8 +84,6 @@ const Testimonials = () => {
                                 dolore eu fugiat nulla pariatur.
                             </div>
                         </div>
-                        {/* SLIDE END */}
-                        {/* SLIDE START */}
                         <div className="text-black flex items-center flex-col px-[25px] md:px-[50px] py-[50px]">
                             <div className="mb-[25px]">
                                 <img
@@ -116,10 +106,8 @@ const Testimonials = () => {
                                 dolore eu fugiat nulla pariatur.
                             </div>
                         </div>
-                        {/* SLIDE END */}
                     </Carousel>
                 </Div>
-                {/* CAROUSEL END */}
             </Wrapper>
         </div>
     );

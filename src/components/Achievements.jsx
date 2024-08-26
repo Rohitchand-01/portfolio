@@ -30,7 +30,6 @@ const Achievements = () => {
                                 }}
                             />
                         </div>
-                        {/* END */}
                     </div>
                 </Div>
             ))}

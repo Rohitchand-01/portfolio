@@ -8,7 +8,6 @@ const Footer = () => {
     return (
         <div className="bg-[#F2F2F2]">
             <Wrapper>
-                {/* NAVBAR START */}
                 <div className="flex flex-col md:flex-row items-center justify-between gap-5 2xl:mt-[63px] relative text-[#111111] border-t border-[#CCCCCC] py-10">
                     <div className="flex items-center gap-[6px]">
                         <div className="w-[35px] h-[35px] rounded-full bg-[#252525] flex justify-center items-center">
@@ -43,7 +42,6 @@ const Footer = () => {
                         </li>
                     </ul>
                 </div>
-                {/* NAVBAR END */}
             </Wrapper>
         </div>
     );

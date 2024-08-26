@@ -12,12 +12,12 @@ const Form = () => {
         e.preventDefault();
         setLoading(true);
 
-        // Below credentials are required to link your email id with contact form you can create your credentials in emailjs.com
+     // Below credentials are required to link your email id with contact form you can create your credentials in emailjs.com
         send(
-            "", // Service ID
-            "", // Template ID
+            "service_61gzyqb", // Service ID
+            "template_m69w2eb", // Template ID
             userInput,
-            "" // Public Key - https://dashboard.emailjs.com/admin/account
+            "q0smJsqHpwvQxjL_M" // Public Key - https://dashboard.emailjs.com/admin/account
         )
             .then((response) => {
                 console.log("SUCCESS!", response.status, response.text);
