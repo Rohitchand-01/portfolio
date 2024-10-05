@@ -28,11 +28,7 @@ const AboutMe = () => {
                     <span>A Web Developer</span>
                     <span className="flex items-center gap-2">
                         <span>Based</span>
-                        <img
-                            src={flag}
-                            alt=""
-                            className="w-[70px] md:w-[150px] 2xl:w-[190px] block mt-1 md:mt-2"
-                        />
+                       
                         <span>In India</span>
                     </span>
                 </Div>

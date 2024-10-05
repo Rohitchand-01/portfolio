@@ -25,7 +25,7 @@ const Portfolio = () => {
                     Latest Projects
                 </div>
                 <div className="text-[16px] 2xl:text-[20px] leading-[24px] 2xl:leading-[32px] text-[#CCCCCC] text-center">
-                Created innovative web solutions using React JS, enhancing user experience and functionality across various projects.
+                Created innovative web solutions using React JS and Node JS, enhancing user experience and functionality across various projects.
                 </div>
             </Div>
             <Div className="flex justify-start md:justify-center gap-[10px] mb-[50px] overflow-auto">
