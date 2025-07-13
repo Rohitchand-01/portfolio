@@ -25,7 +25,7 @@ const AboutMe = () => {
             <Wrapper>
                 
                 <Div className="text-[40px] md:text-[90px] 2xl:text-[120px] leading-[52px] md:leading-[95px] 2xl:leading-[123px] font-oswald uppercase mb-[25px] md:mb-[40px] 2xl:mb-[60px] flex flex-col relative">
-                    <span>A Web Developer</span>
+                    <span>A Full Stack Developer</span>
                     <span className="flex items-center gap-2">
                         <span>Based</span>
                        
@@ -36,7 +36,7 @@ const AboutMe = () => {
 
                
                 <Div className="max-w-[759px] 2xl:max-w-[959px] text-[16px] 2xl:text-[20px] leading-[24px] 2xl:leading-[32px] mb-[20px] md:mb-[30px] 2xl:mb-[50px] relative">
-                Hello! I’m Rohit Chand, a passionate web developer and a third-year Computer Science student at IIIT Sonepat. With a strong foundation in programming and a keen interest in creating seamless digital experiences, I specialize in building dynamic and responsive websites that not only look great but also perform efficiently.
+                Hello! I’m Rohit Chand, a passionate web developer and a fourth-year Computer Science student at IIIT Sonepat. With a strong foundation in programming and a keen interest in creating seamless digital experiences, I specialize in building dynamic and responsive websites that not only look great but also perform efficiently.
                 </Div>
 
 

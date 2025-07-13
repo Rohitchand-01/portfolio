@@ -5,139 +5,150 @@ import "react-toastify/dist/ReactToastify.css";
 import Div from "./Div";
 
 const Form = () => {
-    const [userInput, setUserInput] = useState({});
-    const [loading, setLoading] = useState(false);
+  const [userInput, setUserInput] = useState({
+    from_name: "",
+    from_email: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
 
-    const formSubmitHandler = (e) => {
-        e.preventDefault();
-        setLoading(true);
+  const formSubmitHandler = async (e) => {
+    e.preventDefault();
+    setLoading(true);
 
-     // Below credentials are required to link your email id with contact form you can create your credentials in emailjs.com
-        send(
-            "service_61gzyqb", // Service ID
-            "template_m69w2eb", // Template ID
-            userInput,
-            "q0smJsqHpwvQxjL_M" // Public Key - https://dashboard.emailjs.com/admin/account
-        )
-            .then((response) => {
-                console.log("SUCCESS!", response.status, response.text);
-                formSuccess();
-                setLoading(false);
-            })
-            .catch((err) => {
-                console.log("FAILED...", err);
-                setLoading(false);
-            });
-    };
+    try {
+      // 1. Send to admin
+      await send(
+        "service_61gzyqb",
+        "template_ymmflil",
+        userInput,
+        "q0smJsqHpwvQxjL_M"
+      );
 
-    const formSuccess = () => {
-        toast(
-            "Thanks for submitting your Query, I will get back to you shortly."
-        );
+      // 2. Send confirmation to user
+      await send(
+        "service_61gzyqb",
+        "template_d9klg4t",
+        {
+          to_name: userInput.from_name,
+          to_email: userInput.from_email,
+          from_name: "Your Team Name",
+          from_email: "youremail@example.com",
+        },
+        "q0smJsqHpwvQxjL_M"
+      );
 
-        // Resetting Form
-        document.getElementById("queryForm").reset();
-    };
+      toast.success("Thanks for submitting your query. We'll contact you shortly.");
 
-    const onChange = (e) => {
-        let obj = { ...userInput, [e.target.name]: e.target.value };
-        setUserInput(obj);
-    };
+      setUserInput({
+        from_name: "",
+        from_email: "",
+        message: "",
+      });
 
-    return (
-        <Div className="max-w-[1200px] mx-auto">
-            <ToastContainer />
+      document.getElementById("queryForm").reset();
+    } catch (err) {
+      console.error("FAILED...", err);
+      toast.error("❌ Failed to send message. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
-            {/* LOADER START */}
-            {loading && (
-                <div className="w-full h-full absolute bg-white/[.5] top-0 left-0 flex justify-center items-center">
-                    <svg className="spinner" viewBox="0 0 50 50">
-                        <circle
-                            className="path"
-                            cx="25"
-                            cy="25"
-                            r="20"
-                            fill="none"
-                            strokeWidth="5"
-                        ></circle>
-                    </svg>
-                </div>
-            )}
-            {/* LOADER START */}
+  const onChange = (e) => {
+    const { name, value } = e.target;
+    setUserInput((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
 
-            <form
-                id="queryForm"
-                className="flex flex-col gap-8"
-                onSubmit={formSubmitHandler}
-            >
-                {/* ROW START */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
-                    {/* NAME - FORM FIELD START */}
-                    <div className="flex flex-col gap-2">
-                        <label
-                            htmlFor="from_name"
-                            className="text-[16px] text-black uppercase"
-                        >
-                            Your name<sup>*</sup>
-                        </label>
-                        <input
-                            name="from_name"
-                            type="text"
-                            className="h-[64px] bg-white outline-none border-none text-black px-4"
-                            required
-                            autoComplete="off"
-                            onChange={onChange}
-                        />
-                    </div>
-                    {/* NAME - FORM FIELD END */}
+  return (
+    <Div className="max-w-[1200px] mx-auto relative">
+      <ToastContainer />
 
-                    {/* EMAIL - FORM FIELD START */}
-                    <div className="flex flex-col gap-2">
-                        <label
-                            htmlFor="from_email"
-                            className="text-[16px] text-black uppercase"
-                        >
-                            Your email<sup>*</sup>
-                        </label>
-                        <input
-                            name="from_email"
-                            type="email"
-                            className="h-[64px] bg-white outline-none border-none text-black px-4"
-                            required
-                            autoComplete="off"
-                            onChange={onChange}
-                        />
-                    </div>
-                    {/* EMAIL - FORM FIELD END */}
-                </div>
-                {/* ROW END */}
+      {/* LOADER */}
+      {loading && (
+        <div className="w-full h-full absolute bg-white/60 top-0 left-0 flex justify-center items-center z-10">
+          <svg className="animate-spin h-10 w-10 text-black" viewBox="0 0 50 50">
+            <circle
+              className="path"
+              cx="25"
+              cy="25"
+              r="20"
+              fill="none"
+              strokeWidth="5"
+            ></circle>
+          </svg>
+        </div>
+      )}
 
-                {/* MESSAGE - FORM FIELD START */}
-                <div className="flex flex-col gap-2">
-                    <label
-                        htmlFor="message"
-                        className="text-[16px] text-black uppercase"
-                    >
-                        Please tell a bit about yourself & your project
-                        <sup>*</sup>
-                    </label>
-                    <textarea
-                        name="message"
-                        className="h-[162px] bg-white outline-none border-none text-black p-4 resize-none"
-                        required
-                        onChange={onChange}
-                    />
-                </div>
-                {/* MESSAGE - FORM FIELD END */}
+      <form
+        id="queryForm"
+        className="flex flex-col gap-8 bg-white p-8 shadow-md rounded-lg"
+        onSubmit={formSubmitHandler}
+      >
+        {/* ROW */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
+          {/* NAME */}
+          <div className="flex flex-col gap-2">
+            <label htmlFor="from_name" className="text-sm font-semibold text-gray-700">
+              Your Name <sup>*</sup>
+            </label>
+            <input
+              name="from_name"
+              type="text"
+              className="h-[48px] px-4 border border-gray-300 rounded-md bg-white text-black focus:ring-2 focus:ring-blue-500 outline-none"
+              required
+              autoComplete="off"
+              onChange={onChange}
+              value={userInput.from_name}
+            />
+          </div>
 
-                {/* SUBMIT BUTTON */}
-                <button className="bg-[#111111] h-[64px] max-w-[585px] text-[16px] transition-transform active:scale-[0.95]">
-                    Send Contact Request Now
-                </button>
-                {/* SUBMIT BUTTON */}
-            </form>
-        </Div>
-    );
+          {/* EMAIL */}
+          <div className="flex flex-col gap-2">
+            <label htmlFor="from_email" className="text-sm font-semibold text-gray-700">
+              Your Email <sup>*</sup>
+            </label>
+            <input
+              name="from_email"
+              type="email"
+              className="h-[48px] px-4 border border-gray-300 rounded-md bg-white text-black focus:ring-2 focus:ring-blue-500 outline-none"
+              required
+              autoComplete="off"
+              onChange={onChange}
+              value={userInput.from_email}
+            />
+          </div>
+        </div>
+
+        {/* MESSAGE */}
+        <div className="flex flex-col gap-2">
+          <label htmlFor="message" className="text-sm font-semibold text-gray-700">
+            Please tell a bit about yourself & your project <sup>*</sup>
+          </label>
+          <textarea
+            name="message"
+            rows={6}
+            className="p-4 border border-gray-300 rounded-md bg-white text-black resize-none focus:ring-2 focus:ring-blue-500 outline-none"
+            required
+            onChange={onChange}
+            value={userInput.message}
+          ></textarea>
+        </div>
+
+        {/* SUBMIT */}
+        <button
+          type="submit"
+          className="bg-[#111111] text-white h-[48px] px-6 w-full md:max-w-[300px] rounded-md font-medium hover:bg-black transition-all active:scale-95"
+          disabled={loading}
+        >
+          {loading ? "Sending..." : "Send Contact Request Now"}
+        </button>
+      </form>
+    </Div>
+  );
 };
 
 export default Form;
