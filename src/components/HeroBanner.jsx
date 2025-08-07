@@ -112,7 +112,7 @@ const HeroBanner = () => {
           transition={{ duration: 0.7, delay: 0.25 }}
         >
           <div className='flex items-center gap-3'>
-            <div className='text-[80px] font-light'>80+</div>
+            <div className='text-[80px] font-light'>20+</div>
             <div className='leading-[22px]'>
               SUCCESSFULLY
               <br />
@@ -122,11 +122,15 @@ const HeroBanner = () => {
             </div>
           </div>
           <div className='flex items-center gap-3'>
-            <div className='text-[80px] font-light'>15+</div>
+            <div className='text-[80px] font-light'>1+</div>
             <div className='leading-[22px]'>
               YEARS OF
               <br />
               EXPERIENCE
+              <br />
+              FROM PERSONAL
+              <br />
+              PROJECTS
             </div>
           </div>
         </motion.div>
