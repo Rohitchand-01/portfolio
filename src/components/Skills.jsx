@@ -88,7 +88,7 @@ const Skills = () => {
             <Service
               num='3'
               title='Frontend Development'
-              desc='I’m a React developer skilled in building dynamic, high-performance web applications. Proficient in React, JavaScript, and modern frontend technologies, I focus on creating responsive, user-friendly interfaces with clean, efficient code.'
+              desc='I specialize in building responsive and user-friendly interfaces using React.js, Next.js, and modern JavaScript/TypeScript. With expertise in Tailwind CSS, Bootstrap, and ShadCN UI, I create clean and visually appealing designs. I focus on component-driven development, API integration, and performance optimization to deliver seamless frontend experiences.'
               data={[
                 'Performance',
                 'Component Creation',
@@ -100,7 +100,7 @@ const Skills = () => {
             <Service
               num='4'
               title='Backend Development'
-              desc='I’m a backend developer skilled in building and managing server-side applications and APIs. Proficient in database design and optimization, I focus on creating secure, scalable solutions with efficient performance'
+              desc='I have experience in building robust backend systems using Node.js and Express.js, with a strong focus on RESTful API development. I work with databases like PostgreSQL and MongoDB, leveraging ORMs such as Drizzle for efficient data management. My skills include authentication, server-side logic, and integration to ensure secure and scalable applications.'
               data={[
                 'Database Management',
                 'Server-Side Logic',
