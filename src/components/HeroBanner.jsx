@@ -2,12 +2,11 @@ import { useRef } from 'react'
 import { motion } from 'framer-motion'
 
 import Wrapper from './Wrapper'
-import man from '../assets/man.png'
 import externalLinkIcon from '../assets/external-link-icon.png'
 import gmailIcon from '../assets/email-icon.png'
 import { scrollTo } from '../helper'
 import { useFollowPointer } from './useFollowPointer'
-import resumePdf from "../assets/Rohit_Chand_Resume.pdf";
+import resumePdf from "../assets/Rohit Chand [Software Developer].pdf";
 
 const HeroBanner = () => {
   const ref = useRef(null)
@@ -42,7 +41,7 @@ const HeroBanner = () => {
             <div className='w-[35px] h-[35px] rounded-full bg-[#252525] flex justify-center items-center'>
               <img src={gmailIcon} alt='Gmail Icon' className='w-[18px]' />
             </div>
-            <div>rohitchand010904@gmail.com</div>
+            <div>rohitchand.work@gmail.com</div>
           </a>
 
           <ul className='flex 2xl:text-[20px]'>
@@ -84,8 +83,8 @@ const HeroBanner = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className='text-[50px] md:text-[120px] 2xl:text-[189px] leading-[50px] md:leading-[125px]  2xl:leading-[192px] font-oswald uppercase'>
-            I Am A Full Stack
+          <h1 className='text-[25px] md:text-[80px] 2xl:text-[140px] leading-[50px] md:leading-[125px]  2xl:leading-[125px] font-oswald uppercase'>
+            I Am A Software
             <br className='invisible md:visible' />
             Developer
           </h1>
@@ -112,7 +111,7 @@ const HeroBanner = () => {
           transition={{ duration: 0.7, delay: 0.25 }}
         >
           <div className='flex items-center gap-3'>
-            <div className='text-[80px] font-light'>20+</div>
+            <div className='text-[80px] font-light'>50+</div>
             <div className='leading-[22px]'>
               SUCCESSFULLY
               <br />
@@ -122,15 +121,13 @@ const HeroBanner = () => {
             </div>
           </div>
           <div className='flex items-center gap-3'>
-            <div className='text-[80px] font-light'>1+</div>
+            <div className='text-[80px] font-light'>6+</div>
             <div className='leading-[22px]'>
-              YEARS OF
+              MONTHS OF
               <br />
               EXPERIENCE
-              <br />
-              FROM PERSONAL
-              <br />
-              PROJECTS
+          
+              
             </div>
           </div>
         </motion.div>
@@ -140,7 +137,7 @@ const HeroBanner = () => {
           animate={{ y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <img src={man} alt='' />
+          {/* <img src={man} alt='' /> */}
 
           <div
             className='absolute top-[140px] -right-10 2xl:top-[240px] 2xl:-right-10 w-[140px] h-[140px] rounded-full bg-white/[0.7] flex flex-col justify-center items-center gap-2 backdrop-blur-sm cursor-pointer transition-transform scale-[0.65] md:scale-100 active:scale-[0.55] md:active:scale-90'

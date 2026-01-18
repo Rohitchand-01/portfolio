@@ -18,8 +18,6 @@ const Contact = () => {
                     </div>
                     <div className="text-[16px] 2xl:text-[20px] leading-[24px] 2xl:leading-[32px] text-black text-center max-w-[1000px] mx-auto">
                     I’m always excited to take on new challenges and collaborate on interesting projects. If you’re looking for a dedicated web developer who is eager to contribute and grow, feel free to reach out!
-
-
                     </div>
                 </Div>
                 

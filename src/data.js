@@ -26,53 +26,53 @@ export const filters = [
 
 export const projects = [
   {
-    name: "Trading Dashboard",
+    name: "LinkSaver",
     image: p1,
-    tags: ["dashboard","website"],
-    link: "https://crypto-dashboard-navy-six.vercel.app/",
+    tags: ["website"],
+    link: "https://linksaver.in",
   },
   {
-    name: "ChatGPT-Clone",
+    name: "Cognize",
     image: p2,
-    tags: [ "website", "clone"],
-    link: "https://galaxy-ai-chatgpt-clone.vercel.app/",
+    tags: [ "website"],
+    link: "https://cognize.live/",
+  },
+  {
+    name: "Picstone",
+    image: p3,
+    tags: ["website"],
+    link: "https://picstone-generative-ai.vercel.app/",
+  },{
+    name: "CustomCV",
+    image: p4,
+    tags: ["website"],
+    link: "https://customcv.vercel.app/",
   },
   {
     name: "Pixisphere",
-    image: p3,
+    image: p6,
     tags: ["website"],
     link: "https://pixisphere-drab.vercel.app/",
   },
-  {
-    name: "Artistly",
-    image: p4,
-    tags: ["website"],
-    link: "https://artistly-theta.vercel.app/",
-  },
+  
   {
     name: "Gemini-Clone",
     image: p5,
     tags: ["website", "clone"],
     link: "https://gemini-clone-vert-ten.vercel.app/",
   },
-  {
-    name: "Food Ordering Website",
-    image: p6,
-    tags: ["website"],
-    link: "https://zwiggy-smoky.vercel.app/",
-  },
 ];
 
 export const achievements = [
   {
     id: 1,
-    year: 20,
+    year: 50,
     description: "SUCCESSFULLY<br />COMPLETED<br />PROJECTS",
   },
   {
     id: 2,
-    year: 2,
-    description: "YEARS OF<br />EXPERIENCE <br /> FROM PERSONAL <br /> PROJECTS ",
+    year: 6,
+    description: "MONTHS OF<br />EXPERIENCE <br /> ",
   },
   {
     id: 3,

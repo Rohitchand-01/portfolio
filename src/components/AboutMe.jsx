@@ -2,7 +2,6 @@ import React from "react";
 import { motion, useTransform, useScroll } from "framer-motion";
 
 import Wrapper from "./Wrapper";
-import flag from "../assets/indian-flag.png";
 import pe1 from "../assets/sec-2-p-e-1.png";
 import pe2 from "../assets/sec-2-p-e-2.png";
 import Div from "./Div";
@@ -25,7 +24,7 @@ const AboutMe = () => {
             <Wrapper>
                 
                 <Div className="text-[40px] md:text-[90px] 2xl:text-[120px] leading-[52px] md:leading-[95px] 2xl:leading-[123px] font-oswald uppercase mb-[25px] md:mb-[40px] 2xl:mb-[60px] flex flex-col relative">
-                    <span>A Full Stack Developer</span>
+                    <span>A Software Developer</span>
                     <span className="flex items-center gap-2">
                         <span>Based</span>
                        

@@ -10,13 +10,13 @@ const Footer = () => {
       <Wrapper>
         <div className='flex flex-col md:flex-row items-center justify-between gap-5 2xl:mt-[63px] relative text-[#111111] border-t border-[#CCCCCC] py-10'>
           <a
-            href='mailto:rohitchand010904@gmail.com'
+            href='mailto:rohitchand.work@gmail.com'
             className='flex items-center gap-[6px] cursor-pointer hover:opacity-80 transition'
           >
             <div className='w-[35px] h-[35px] rounded-full bg-[#252525] flex justify-center items-center'>
               <img src={gmailIcon} alt='Gmail Icon' className='w-[18px]' />
             </div>
-            <div>rohitchand010904@gmail.com</div>
+            <div>rohitchand.work@gmail.com</div>
           </a>
           <ul className='flex 2xl:text-[20px] gap-5 md:gap-8'>
             <li
