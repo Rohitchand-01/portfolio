@@ -20,7 +20,7 @@ const AboutMe = () => {
                 <div className="max-w-3xl space-y-6 md:space-y-8 lg:space-y-10 px-5 md:px-0">
                     <Div>
                         <p className="text-base md:text-lg lg:text-xl text-gray leading-relaxed">
-                            I am Rohit Chand, a Software Developer specializing in full-stack development with a focus on building scalable, high-performance applications. Currently pursuing Computer Science at IIIT Sonepat and serving as a Software Developer at CodeFeast, I combine academic rigor with practical industry experience to deliver robust solutions.
+                            I am Rohit Chand, a Software Developer specializing in full-stack development with a focus on building scalable, high-performance applications. Currently serving as a Software Developer at CodeFeast, I combine technical expertise with practical industry experience to deliver robust solutions.
                         </p>
                     </Div>
 
