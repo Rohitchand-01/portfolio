@@ -42,7 +42,7 @@ const Form = () => {
     const isValidEmail = await verifyEmailExists(userInput.from_email);
     
     if (!isValidEmail) {
-      toast.error("❌ Please enter a valid, deliverable email address.");
+      toast.error("Please enter a valid, deliverable email address.");
       return;
     }
 
@@ -79,7 +79,7 @@ const Form = () => {
       document.getElementById("queryForm").reset();
     } catch (err) {
       console.error("FAILED...", err);
-      toast.error("❌ Failed to send message. Please try again.");
+      toast.error("Failed to send message. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -94,19 +94,23 @@ const Form = () => {
   };
 
   return (
-    <Div className="max-w-[1200px] mx-auto relative">
-      <ToastContainer />
+    <Div className="max-w-2xl mx-auto relative">
+      <ToastContainer 
+        position="top-right"
+        toastClassName="bg-white border border-lightgray shadow-sm"
+        bodyClassName="text-sm text-black"
+      />
 
       {(loading || verifying) && (
-        <div className="w-full h-full absolute bg-white/60 top-0 left-0 flex justify-center items-center z-10">
-          <svg className="animate-spin h-10 w-10 text-black" viewBox="0 0 50 50">
+        <div className="w-full h-full absolute bg-white/80 backdrop-blur-sm top-0 left-0 flex justify-center items-center z-10 rounded-lg">
+          <svg className="animate-spin h-8 w-8 text-black" viewBox="0 0 50 50">
             <circle
               className="path"
               cx="25"
               cy="25"
               r="20"
               fill="none"
-              strokeWidth="5"
+              strokeWidth="3"
             ></circle>
           </svg>
         </div>
@@ -114,18 +118,18 @@ const Form = () => {
 
       <form
         id="queryForm"
-        className="flex flex-col gap-8 bg-white p-8 shadow-md rounded-lg"
+        className="flex flex-col gap-6 md:gap-8"
         onSubmit={formSubmitHandler}
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-6">
           <div className="flex flex-col gap-2">
-            <label htmlFor="from_name" className="text-sm font-semibold text-gray-700">
-              Your Name <sup>*</sup>
+            <label htmlFor="from_name" className="text-sm text-black font-medium">
+              Name
             </label>
             <input
               name="from_name"
               type="text"
-              className="h-[48px] px-4 border border-gray-300 rounded-md bg-white text-black focus:ring-2 focus:ring-blue-500 outline-none"
+              className="h-12 px-4 border border-lightgray rounded bg-white text-black focus:border-black focus:outline-none transition-colors duration-300"
               required
               autoComplete="off"
               onChange={onChange}
@@ -134,13 +138,13 @@ const Form = () => {
           </div>
 
           <div className="flex flex-col gap-2">
-            <label htmlFor="from_email" className="text-sm font-semibold text-gray-700">
-              Your Email <sup>*</sup>
+            <label htmlFor="from_email" className="text-sm text-black font-medium">
+              Email
             </label>
             <input
               name="from_email"
               type="email"
-              className="h-[48px] px-4 border border-gray-300 rounded-md bg-white text-black focus:ring-2 focus:ring-blue-500 outline-none"
+              className="h-12 px-4 border border-lightgray rounded bg-white text-black focus:border-black focus:outline-none transition-colors duration-300"
               required
               autoComplete="off"
               onChange={onChange}
@@ -150,13 +154,13 @@ const Form = () => {
         </div>
 
         <div className="flex flex-col gap-2">
-          <label htmlFor="message" className="text-sm font-semibold text-gray-700">
-            Please tell a bit about yourself & your project <sup>*</sup>
+          <label htmlFor="message" className="text-sm text-black font-medium">
+            Message
           </label>
           <textarea
             name="message"
             rows={6}
-            className="p-4 border border-gray-300 rounded-md bg-white text-black resize-none focus:ring-2 focus:ring-blue-500 outline-none"
+            className="p-4 border border-lightgray rounded bg-white text-black resize-none focus:border-black focus:outline-none transition-colors duration-300"
             required
             onChange={onChange}
             value={userInput.message}
@@ -165,10 +169,10 @@ const Form = () => {
 
         <button
           type="submit"
-          className="bg-[#111111] text-white h-[48px] px-6 w-full md:max-w-[300px] rounded-md font-medium hover:bg-black transition-all active:scale-95"
+          className="bg-black text-white h-12 px-8 w-full md:w-auto rounded font-medium hover:bg-darkgray transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
           disabled={loading || verifying}
         >
-          {verifying ? "Verifying Email..." : loading ? "Sending..." : "Send Contact Request Now"}
+          {verifying ? "Verifying..." : loading ? "Sending..." : "Send Message"}
         </button>
       </form>
     </Div>

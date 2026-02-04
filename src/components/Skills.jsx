@@ -1,12 +1,10 @@
 import React from 'react'
-import { motion, useTransform, useScroll } from 'framer-motion'
-
 import Wrapper from './Wrapper'
 import SkillIcon from './SkillIcon'
-import Service from './Service'
 import Portfolio from './Portfolio'
 import Achievements from './Achievements'
 import Div from './Div'
+import { skillCategories } from '../data'
 
 import sk1 from '../assets/sk-1.png'
 import sk2 from '../assets/sk-2.png'
@@ -21,110 +19,63 @@ import sk10 from '../assets/sk-10.png'
 import sk11 from '../assets/sk-11.png'
 import sk12 from '../assets/sk-12.png'
 import sk13 from '../assets/sk-13.png'
-import pattern from '../assets/heading-pattern.png'
-import pe1 from '../assets/sec-3-p-e-1.png'
-import pe2 from '../assets/sec-3-p-e-2.png'
-import pe3 from '../assets/sec-3-p-e-3.png'
 
 const Skills = () => {
-  const { scrollY } = useScroll()
-  const y1 = useTransform(scrollY, [0, 1500], [1000, 0], { clamp: false })
-  const y2 = useTransform(scrollY, [0, 2200], [1500, 0], { clamp: false })
-  const y3 = useTransform(scrollY, [0, 2700], [2000, 0], { clamp: false })
   return (
     <div
       id='skills'
-      className='bg-[#111111] py-[50px] md:py-[100px] relative overflow-hidden'
+      className='bg-offwhite py-20 md:py-32 lg:py-40 relative'
     >
-      <div className='sec-3-bg-gradient-1' />
-      <div className='sec-3-bg-gradient-2' />
-      <motion.img className='sec-3-p-e-1' style={{ y: y1 }} src={pe1} />
-      <motion.img className='sec-3-p-e-2' style={{ y: y2 }} src={pe2} />
-      <motion.img className='sec-3-p-e-3' style={{ y: y3 }} src={pe3} />
       <Wrapper>
-        <Div className='grid grid-cols-4 gap-3 md:grid-cols-11 relative'>
+        <Div className='mb-16 md:mb-20'>
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-display font-medium text-black mb-4">
+            Skills
+          </h2>
+          <div className="w-16 h-px bg-black"></div>
+        </Div>
+
+        <Div className='grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-6 md:gap-8 lg:gap-10 mb-20 md:mb-32 justify-items-center'>
           <SkillIcon path={sk1} />
           <SkillIcon path={sk2} />
           <SkillIcon path={sk3} />
           <SkillIcon path={sk4} />
-
+          <SkillIcon path={sk5} />
+          <SkillIcon path={sk6} />
+          <SkillIcon path={sk7} />
+          <SkillIcon path={sk8} />
+          <SkillIcon path={sk9} />
+          <SkillIcon path={sk10} />
           <SkillIcon path={sk11} />
           <SkillIcon path={sk12} />
           <SkillIcon path={sk13} />
-          
-          <SkillIcon path={sk5} />
-         
-          <SkillIcon path={sk7} /><SkillIcon path={sk10} />
-          <SkillIcon path={sk8} />
-          <SkillIcon path={sk9} />
-           <SkillIcon path={sk6} />
         </Div>
-        <div className='flex items-end justify-between flex-wrap-reverse py-[50px] md:py-[100px] relative'>
-          <div className='md:max-w-[65%] flex flex-col gap-6 md:gap-10'>
-            <Service
-              num='1'
-              title='Ui/Ux Design'
-              desc='I’m a UI/UX designer with 1 years of experience in creating user-centered, visually appealing interfaces. Skilled in tools like Figma, I focus on research, wireframing, and prototyping to deliver intuitive designs that boost user engagement. Known for my creative problem-solving and effective collaboration.'
-              data={[
-                'Prototype',
-                'Wireframe',
-                'User Experience',
-                'Visual Design',
-                'Usability Testing'
-              ]}
-            />
-            <Service
-              num='2'
-              title='Database Management developer'
-              desc='I’m a Database Management developer specializing in designing, implementing, and optimizing databases. Skilled in SQL and MongoDB systems, I focus on ensuring data integrity, performance, and security.'
-              data={[
-                'Database Expertise',
-                'Database Design',
-                'Data Security',
-                'Performance Tuning',
-                'Backup and Recovery'
-              ]}
-            />
-            <Service
-              num='3'
-              title='Frontend Development'
-              desc='I specialize in building responsive and user-friendly interfaces using React.js, Next.js, and modern JavaScript/TypeScript. With expertise in Tailwind CSS, Bootstrap, and ShadCN UI, I create clean and visually appealing designs. I focus on component-driven development, API integration, and performance optimization to deliver seamless frontend experiences.'
-              data={[
-                'Performance',
-                'Component Creation',
-                'User Experience',
-                'Responsive Design',
-                'API Integration'
-              ]}
-            />
-            <Service
-              num='4'
-              title='Backend Development'
-              desc='I have experience in building robust backend systems using Node.js and Express.js, with a strong focus on RESTful API development. I work with databases like PostgreSQL and MongoDB, leveraging ORMs such as Drizzle for efficient data management. My skills include authentication, server-side logic, and integration to ensure secure and scalable applications.'
-              data={[
-                'Database Management',
-                'Server-Side Logic',
-                'API Integration',
-                'Security',
-                'Performance Optimization'
-              ]}
-            />
-          </div>
-          <div className='flex flex-wrap justify-center gap-2 md:gap-0 md:flex-col text-[40px] md:text-[90px] 2xl:text-[120px] leading-[40px] md:leading-[95px] 2xl:leading-[123px] font-oswald uppercase text-gradient mb-10 md:mb-0 md:sticky top-2'>
-            <span>Solving</span>
-            <span>Problems</span>
-            <span className='flex items-center gap-2'>
-              Through
-              <img src={pattern} className='block md:hidden w-[80px] mt-1' />
-            </span>
-            <span className='flex items-center gap-4'>
-              Good{' '}
-              <img
-                src={pattern}
-                className='hidden md:block md:w-[140px] 2xl:w-[190px] mt-3'
-              />
-            </span>
-            <span>Services</span>
+
+        <div className='mb-20 md:mb-32'>
+          <Div className='mb-12 md:mb-16'>
+            <h3 className="text-3xl md:text-5xl font-display font-medium text-black mb-4">
+              Technical Expertise
+            </h3>
+            <div className="w-16 h-px bg-black"></div>
+          </Div>
+
+          <div className='space-y-10 md:space-y-12'>
+            {skillCategories.map((category, index) => (
+              <Div key={index} className="space-y-4">
+                <h4 className="text-lg md:text-xl font-medium text-black mb-4">
+                  {category.category}
+                </h4>
+                <div className="flex flex-wrap gap-2.5">
+                  {category.skills.map((skill, idx) => (
+                    <span
+                      key={idx}
+                      className="text-sm md:text-base text-gray border border-lightgray px-4 py-2 rounded-full hover:border-black hover:text-black transition-colors duration-300"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </Div>
+            ))}
           </div>
         </div>
 

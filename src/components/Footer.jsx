@@ -1,44 +1,47 @@
 import React from 'react'
-
 import Wrapper from './Wrapper'
 import gmailIcon from '../assets/email-icon.png'
 import { scrollTo } from '../helper'
 
 const Footer = () => {
   return (
-    <div className='bg-[#F2F2F2]'>
+    <div className='bg-offwhite border-t border-lightgray'>
       <Wrapper>
-        <div className='flex flex-col md:flex-row items-center justify-between gap-5 2xl:mt-[63px] relative text-[#111111] border-t border-[#CCCCCC] py-10'>
+        <div className='flex flex-col md:flex-row items-center justify-between gap-6 py-8 md:py-12 text-sm'>
           <a
             href='mailto:rohitchand.work@gmail.com'
-            className='flex items-center gap-[6px] cursor-pointer hover:opacity-80 transition'
+            className='flex items-center gap-2 text-gray hover:text-black transition-colors duration-300'
           >
-            <div className='w-[35px] h-[35px] rounded-full bg-[#252525] flex justify-center items-center'>
-              <img src={gmailIcon} alt='Gmail Icon' className='w-[18px]' />
-            </div>
-            <div>rohitchand.work@gmail.com</div>
+            <img src={gmailIcon} alt='Email' className='w-4 h-4 opacity-60' />
+            <span>rohitchand.work@gmail.com</span>
           </a>
-          <ul className='flex 2xl:text-[20px] gap-5 md:gap-8'>
+          <ul className='flex gap-6 md:gap-8'>
             <li
-              className='cursor-pointer transition active:scale-90'
+              className='cursor-pointer text-gray hover:text-black transition-colors duration-300'
               onClick={() => scrollTo('about')}
             >
-              About me
+              About
             </li>
             <li
-              className='cursor-pointer transition active:scale-90'
+              className='cursor-pointer text-gray hover:text-black transition-colors duration-300'
+              onClick={() => scrollTo('experience')}
+            >
+              Experience
+            </li>
+            <li
+              className='cursor-pointer text-gray hover:text-black transition-colors duration-300'
               onClick={() => scrollTo('skills')}
             >
               Skills
             </li>
             <li
-              className='cursor-pointer transition active:scale-90'
+              className='cursor-pointer text-gray hover:text-black transition-colors duration-300'
               onClick={() => scrollTo('work')}
             >
-              Work
+              Projects
             </li>
             <li
-              className='cursor-pointer transition active:scale-90'
+              className='cursor-pointer text-gray hover:text-black transition-colors duration-300'
               onClick={() => scrollTo('contact')}
             >
               Contact

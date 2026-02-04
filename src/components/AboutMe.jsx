@@ -1,53 +1,40 @@
 import React from "react";
-import { motion, useTransform, useScroll } from "framer-motion";
-
 import Wrapper from "./Wrapper";
-import pe1 from "../assets/sec-2-p-e-1.png";
-import pe2 from "../assets/sec-2-p-e-2.png";
 import Div from "./Div";
 
 const AboutMe = () => {
-    const { scrollY } = useScroll();
-    const y1 = useTransform(scrollY, [0, 500], [100, 0], { clamp: false });
-    const y2 = useTransform(scrollY, [0, 500], [0, -200], { clamp: false });
     return (
         <div
             id="about"
-            className="w-full py-[50px] md:py-[100px] bg-white text-black relative overflow-hidden"
+            className="w-full py-20 md:py-32 lg:py-40 bg-white relative"
         >
-            
-            <span className="sec-2-bg-gradient" />
-            <motion.img className="sec-2-p-e-1" style={{ y: y1 }} src={pe1} />
-            <motion.img className="sec-2-p-e-2" style={{ y: y2 }} src={pe2} />
-            
-
             <Wrapper>
-                
-                <Div className="text-[40px] md:text-[90px] 2xl:text-[120px] leading-[52px] md:leading-[95px] 2xl:leading-[123px] font-oswald uppercase mb-[25px] md:mb-[40px] 2xl:mb-[60px] flex flex-col relative">
-                    <span>A Software Developer</span>
-                    <span className="flex items-center gap-2">
-                        <span>Based</span>
-                       
-                        <span>In India</span>
-                    </span>
-                </Div>
-               
-
-               
-                <Div className="max-w-[759px] 2xl:max-w-[959px] text-[16px] 2xl:text-[20px] leading-[24px] 2xl:leading-[32px] mb-[20px] md:mb-[30px] 2xl:mb-[50px] relative">
-                Hello! I’m Rohit Chand, a passionate web developer and a fourth-year Computer Science student at IIIT Sonepat. With a strong foundation in programming and a keen interest in creating seamless digital experiences, I specialize in building dynamic and responsive websites that not only look great but also perform efficiently.
+                <Div className="mb-16 md:mb-20">
+                    <h2 className="text-4xl md:text-6xl lg:text-7xl font-display font-medium text-black mb-4">
+                        About
+                    </h2>
+                    <div className="w-16 h-px bg-black"></div>
                 </Div>
 
+                <div className="max-w-3xl space-y-8 md:space-y-10">
+                    <Div>
+                        <p className="text-lg md:text-xl text-gray leading-relaxed">
+                            I'm Rohit Chand, a fourth-year Computer Science student at IIIT Sonepat with a passion for building scalable, high-performance applications. Currently working as a Software Developer at CodeFeast, I specialize in full-stack development using modern technologies.
+                        </p>
+                    </Div>
 
-                <Div className="max-w-[759px] 2xl:max-w-[959px] text-[16px] 2xl:text-[20px] leading-[24px] 2xl:leading-[32px] mb-[20px] md:mb-[30px] 2xl:mb-[50px] relative">
-                I love transforming ideas into functional, user-friendly websites. Whether it’s developing a personal blog, creating a sophisticated e-commerce platform, or optimizing web applications for speed and usability, I strive to deliver high-quality work that exceeds expectations.
-                </Div>
+                    <Div>
+                        <p className="text-lg md:text-xl text-gray leading-relaxed">
+                            My experience includes developing MERN stack applications, optimizing database schemas for 35% performance improvements, and building RESTful microservices handling 1,000+ daily interactions. I'm skilled in translating design prototypes into pixel-perfect interfaces and implementing CI/CD pipelines for efficient deployments.
+                        </p>
+                    </Div>
 
-
-                <Div className="max-w-[759px] 2xl:max-w-[959px] text-[16px] 2xl:text-[20px] leading-[24px] 2xl:leading-[32px] relative">
-                    I believe in a user-centric approach to web development. This means focusing on the needs and experiences of the end user while leveraging best practices and the latest technologies to bring innovative solutions to life. I am also a strong advocate for clean, maintainable code and continuous learning.
-                </Div>
-               
+                    <Div>
+                        <p className="text-lg md:text-xl text-gray leading-relaxed">
+                            I believe in product thinking, clean architecture, and continuous learning. Beyond coding, I've led multiple clubs and events, coordinated project teams, and developed various self-initiated products including automation tools, AI applications, and marketplace platforms.
+                        </p>
+                    </Div>
+                </div>
             </Wrapper>
         </div>
     );

@@ -1,10 +1,15 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const SkillIcon = ({ path }) => {
     return (
-        <div className="flex items-center justify-center w-[70px] md:w-[90px] 2xl:w-[110px] h-[70px] md:h-[90px] 2xl:h-[110px] rounded-full bg-[#292929]">
-            <img src={path} className="w-[34px] md:w-[44px] 2xl:w-[58px]" />
-        </div>
+        <motion.div
+            className="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20"
+            whileHover={{ scale: 1.1, y: -2 }}
+            transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
+        >
+            <img src={path} className="w-full h-full object-contain opacity-80 hover:opacity-100 transition-opacity duration-300" alt="Skill" />
+        </motion.div>
     );
 };
 
