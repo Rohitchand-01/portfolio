@@ -113,7 +113,7 @@ export const experiences = [
   },
   {
     id: 2,
-    company: "OriosX",
+    company: "Qrios",
     role: "Frontend Developer",
     period: "September 2025 - December 2025",
     location: "Remote",
@@ -145,5 +145,82 @@ export const skillCategories = [
   {
     category: "DevOps & Cloud",
     skills: ["Docker", "AWS", "CI/CD"]
+  }
+];
+
+export const pricingPlans = [
+  {
+    id: 1,
+    name: "Hourly Rate",
+    price: "$12",
+    period: "hour",
+    description: "Flexible hourly billing for ongoing projects and consultations",
+    features: [
+      "Pay only for hours worked",
+      "Flexible scheduling",
+      "Real-time progress updates",
+      "Minimum 10 hours",
+      "Weekly time reports",
+      "Direct communication"
+    ],
+    featured: false,
+    link: "#contact",
+    buttonText: "Get Started"
+  },
+  {
+    id: 2,
+    name: "Basic",
+    price: "$500",
+    period: "project",
+    description: "Perfect for small projects and simple websites",
+    features: [
+      "Up to 5 pages",
+      "Responsive design",
+      "Basic SEO optimization",
+      "1 revision round",
+      "Email support"
+    ],
+    featured: false,
+    link: "#contact",
+    buttonText: "Get Started"
+  },
+  {
+    id: 3,
+    name: "Professional",
+    price: "$1,500",
+    period: "project",
+    description: "Ideal for medium-sized projects with advanced features",
+    features: [
+      "Up to 15 pages",
+      "Custom design",
+      "Advanced SEO",
+      "3 revision rounds",
+      "Performance optimization",
+      "Database integration",
+      "Priority support"
+    ],
+    featured: true,
+    link: "#contact",
+    buttonText: "Get Started"
+  },
+  {
+    id: 4,
+    name: "Enterprise",
+    price: "Custom",
+    period: null,
+    description: "Tailored solutions for large-scale applications",
+    features: [
+      "Unlimited pages",
+      "Full-stack development",
+      "Microservices architecture",
+      "Unlimited revisions",
+      "24/7 support",
+      "CI/CD setup",
+      "Cloud deployment",
+      "Dedicated project manager"
+    ],
+    featured: false,
+    link: "#contact",
+    buttonText: "Contact Us"
   }
 ];

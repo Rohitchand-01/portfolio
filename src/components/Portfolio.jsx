@@ -15,25 +15,25 @@ const Portfolio = () => {
   };
 
   return (
-    <div id="work" className="mt-20 md:mt-32 relative">
-      <Div className="mb-12 md:mb-16">
+    <section id="work" className="mt-20 md:mt-32 relative" aria-label="Projects Portfolio">
+      <Div className="mb-12 md:mb-16 px-5 md:px-0">
         <h2 className="text-4xl md:text-6xl lg:text-7xl font-display font-medium text-black mb-4">
           Projects
         </h2>
-        <div className="w-16 h-px bg-black mb-6"></div>
-        <p className="text-base md:text-lg text-gray leading-relaxed max-w-3xl">
+        <div className="w-16 h-px bg-black mb-4 md:mb-6"></div>
+        <p className="text-sm md:text-base lg:text-lg text-gray leading-relaxed max-w-3xl">
           A collection of innovative web solutions built with modern technologies, 
           focusing on performance, user experience, and scalable architecture.
         </p>
       </Div>
 
-      <Div className="flex justify-start md:justify-center gap-3 mb-12 md:mb-16 overflow-x-auto pb-2 scrollbar-hide">
+      <Div className="flex justify-start md:justify-center gap-3 md:gap-4 mb-12 md:mb-16 lg:mb-20 overflow-x-auto pb-2 scrollbar-hide px-5 md:px-0">
         {filters.map((item, index) => (
           <button
             key={index}
-            className={`text-sm md:text-base px-4 py-2 whitespace-nowrap transition-all duration-300 ${
+            className={`text-sm md:text-base px-5 py-2.5 whitespace-nowrap transition-all duration-300 ${
               selectedTag === item.id
-                ? "text-black border-b-2 border-black"
+                ? "text-black border-b-2 border-black font-medium"
                 : "text-gray hover:text-black border-b-2 border-transparent"
             }`}
             onClick={() => filterHandler(item.id)}
@@ -43,60 +43,65 @@ const Portfolio = () => {
         ))}
       </Div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
-        {projectData.map((item, index) => (
-          <motion.div
-            key={index}
-            className="flex flex-col group"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <a
-              href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block bg-white border border-lightgray rounded-lg aspect-video overflow-hidden mb-6 hover:border-gray transition-colors duration-300"
+      <div className="space-y-16 md:space-y-20 lg:space-y-24 xl:space-y-28 px-5 md:px-0">
+        {projectData.map((item, index) => {
+          const isEven = index % 2 === 0;
+          return (
+            <motion.div
+              key={index}
+              className={`flex flex-col lg:flex-row gap-8 md:gap-10 lg:gap-14 xl:gap-20 items-start ${
+                isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'
+              }`}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, delay: index * 0.15, ease: [0.22, 1, 0.36, 1] }}
             >
-              <img
-                src={item.image}
-                alt={item.name}
-                className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-              />
-            </a>
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <h3 className="text-2xl md:text-3xl text-black font-medium">
-                  {item.name}
-                </h3>
-                <a
-                  href={item.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-gray hover:text-black transition-colors duration-300"
-                >
-                  View →
-                </a>
+              <a
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-white border border-lightgray rounded-lg aspect-video overflow-hidden w-full lg:w-[55%] hover:border-gray transition-all duration-300 group shadow-sm hover:shadow-lg"
+              >
+                <img
+                  src={item.image}
+                  alt={`${item.name} - ${item.description.substring(0, 100)}`}
+                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  loading="lazy"
+                />
+              </a>
+              <div className="flex flex-col w-full lg:w-[45%]">
+                <div className="mb-6 md:mb-8">
+                  <h3 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl text-black font-medium mb-4 md:mb-6">
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:opacity-80 transition-opacity duration-300"
+                    >
+                      {item.name}
+                    </a>
+                  </h3>
+                  <p className="text-sm md:text-base lg:text-lg xl:text-xl text-gray leading-relaxed mb-4 md:mb-6">
+                    {item.description}
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-2 md:gap-2.5 mt-auto">
+                  {item.tech && item.tech.map((tech, idx) => (
+                    <span
+                      key={idx}
+                      className="text-xs md:text-sm text-gray border border-lightgray px-2.5 md:px-3.5 py-1.5 md:py-2 rounded-full hover:border-black hover:text-black transition-colors duration-300"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <p className="text-base md:text-lg text-gray leading-relaxed">
-                {item.description}
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {item.tech && item.tech.map((tech, idx) => (
-                  <span
-                    key={idx}
-                    className="text-xs md:text-sm text-gray border border-lightgray px-2.5 py-1 rounded hover:border-gray transition-colors duration-300"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-        ))}
+            </motion.div>
+          );
+        })}
       </div>
-    </div>
+    </section>
   );
 };
 

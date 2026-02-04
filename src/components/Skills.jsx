@@ -22,53 +22,38 @@ import sk13 from '../assets/sk-13.png'
 
 const Skills = () => {
   return (
-    <div
+    <section
       id='skills'
       className='bg-offwhite py-20 md:py-32 lg:py-40 relative'
+      aria-label="Technical Skills and Expertise"
     >
       <Wrapper>
-        <Div className='mb-16 md:mb-20'>
+        <Div className='mb-12 md:mb-16 lg:mb-20 px-5 md:px-0'>
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-display font-medium text-black mb-4">
             Skills
           </h2>
           <div className="w-16 h-px bg-black"></div>
         </Div>
 
-        <Div className='grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-6 md:gap-8 lg:gap-10 mb-20 md:mb-32 justify-items-center'>
-          <SkillIcon path={sk1} />
-          <SkillIcon path={sk2} />
-          <SkillIcon path={sk3} />
-          <SkillIcon path={sk4} />
-          <SkillIcon path={sk5} />
-          <SkillIcon path={sk6} />
-          <SkillIcon path={sk7} />
-          <SkillIcon path={sk8} />
-          <SkillIcon path={sk9} />
-          <SkillIcon path={sk10} />
-          <SkillIcon path={sk11} />
-          <SkillIcon path={sk12} />
-          <SkillIcon path={sk13} />
-        </Div>
-
-        <div className='mb-20 md:mb-32'>
-          <Div className='mb-12 md:mb-16'>
-            <h3 className="text-3xl md:text-5xl font-display font-medium text-black mb-4">
+        <div className='mb-16 md:mb-24 lg:mb-32'>
+          <Div className='mb-12 md:mb-16 lg:mb-20 px-5 md:px-0'>
+            <h3 className="text-2xl md:text-3xl lg:text-5xl font-display font-medium text-black mb-4">
               Technical Expertise
             </h3>
             <div className="w-16 h-px bg-black"></div>
           </Div>
 
-          <div className='space-y-10 md:space-y-12'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 md:gap-x-8 lg:gap-x-12 xl:gap-x-16 gap-y-8 md:gap-y-12 lg:gap-y-16 px-5 md:px-0'>
             {skillCategories.map((category, index) => (
-              <Div key={index} className="space-y-4">
-                <h4 className="text-lg md:text-xl font-medium text-black mb-4">
+              <Div key={index} className="space-y-4 md:space-y-5">
+                <h4 className="text-sm md:text-base lg:text-lg font-medium text-black tracking-tight">
                   {category.category}
                 </h4>
-                <div className="flex flex-wrap gap-2.5">
+                <div className="flex flex-wrap gap-1.5 md:gap-2">
                   {category.skills.map((skill, idx) => (
                     <span
                       key={idx}
-                      className="text-sm md:text-base text-gray border border-lightgray px-4 py-2 rounded-full hover:border-black hover:text-black transition-colors duration-300"
+                      className="text-xs md:text-sm text-gray border border-lightgray px-2.5 md:px-3 py-1 md:py-1.5 rounded-full hover:border-black hover:text-black transition-all duration-300"
                     >
                       {skill}
                     </span>
@@ -79,10 +64,32 @@ const Skills = () => {
           </div>
         </div>
 
+        <Div className='mb-16 md:mb-24 lg:mb-32 px-5 md:px-0'>
+          <h3 className="text-2xl md:text-3xl lg:text-5xl font-display font-medium text-black mb-4">
+            Technologies
+          </h3>
+          <div className="w-16 h-px bg-black mb-8 md:mb-12 lg:mb-16"></div>
+          <div className='grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-6 md:gap-8 lg:gap-10 xl:gap-12 justify-items-center px-5 md:px-0'>
+            <SkillIcon path={sk1} />
+            <SkillIcon path={sk2} />
+            <SkillIcon path={sk3} />
+            <SkillIcon path={sk4} />
+            <SkillIcon path={sk5} />
+            <SkillIcon path={sk6} />
+            <SkillIcon path={sk7} />
+            <SkillIcon path={sk8} />
+            <SkillIcon path={sk9} />
+            <SkillIcon path={sk10} />
+            <SkillIcon path={sk11} />
+            <SkillIcon path={sk12} />
+            <SkillIcon path={sk13} />
+          </div>
+        </Div>
+
         <Portfolio />
         <Achievements />
       </Wrapper>
-    </div>
+    </section>
   )
 }
 
