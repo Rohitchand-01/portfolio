@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion'
 import Wrapper from './Wrapper'
-import gmailIcon from '../assets/email-icon.png'
 import { scrollTo } from '../helper'
-import resumePdf from "../assets/Rohit Chand [Software Developer].pdf";
+import resumePdf from "../assets/Rohit Chand [Software Developer].pdf"
+import emailIcon from '../assets/email-icon.png'
+
+const GMAIL_COMPOSE_URL = 'https://mail.google.com/mail/?view=cm&fs=1&to=rohitchand.work@gmail.com'
 
 const HeroBanner = () => {
   return (
@@ -18,18 +20,24 @@ const HeroBanner = () => {
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
           <a
-            href='mailto:rohitchand.work@gmail.com'
+            href={GMAIL_COMPOSE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className='hidden sm:flex items-center gap-2 text-xs md:text-sm text-gray hover:text-black transition-colors duration-300 whitespace-nowrap'
+            aria-label="Open Gmail to email rohitchand.work@gmail.com"
           >
-            <img src={gmailIcon} alt='Email icon' className='w-4 h-4 opacity-60 flex-shrink-0' aria-hidden="true" />
+            <img src={emailIcon} alt="" className="w-4 h-4 opacity-60 flex-shrink-0" aria-hidden="true" />
             <span className="hidden xl:inline">rohitchand.work@gmail.com</span>
             <span className="xl:hidden hidden md:inline">Email</span>
           </a>
           <a
-            href='mailto:rohitchand.work@gmail.com'
+            href={GMAIL_COMPOSE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className='sm:hidden flex items-center gap-1.5 text-xs text-gray hover:text-black transition-colors duration-300'
+            aria-label="Open Gmail"
           >
-            <img src={gmailIcon} alt='Email' className='w-4 h-4 opacity-60' />
+            <img src={emailIcon} alt="" className="w-4 h-4 opacity-60" aria-hidden="true" />
           </a>
 
           <ul className='flex gap-2 sm:gap-3 md:gap-4 lg:gap-6 xl:gap-8 text-xs md:text-sm items-center'>

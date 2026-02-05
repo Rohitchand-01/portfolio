@@ -19,6 +19,14 @@ import sk10 from '../assets/sk-10.png'
 import sk11 from '../assets/sk-11.png'
 import sk12 from '../assets/sk-12.png'
 import sk13 from '../assets/sk-13.png'
+import sk14 from '../assets/sk-14.png'
+import sk15 from '../assets/sk-15.png'
+import sk16 from '../assets/sk-16.png'
+import sk17 from '../assets/sk-17.png'
+import sk18 from '../assets/sk-18.png'
+import sk19 from '../assets/sk-19.png'
+import sk20 from '../assets/sk-20.jpg'
+import sk21 from '../assets/sk-21.png'
 
 const Skills = () => {
   return (
@@ -83,6 +91,14 @@ const Skills = () => {
             <SkillIcon path={sk11} />
             <SkillIcon path={sk12} />
             <SkillIcon path={sk13} />
+            <SkillIcon path={sk14} />
+            <SkillIcon path={sk15} />
+            <SkillIcon path={sk16} />
+            <SkillIcon path={sk17} />
+            <SkillIcon path={sk18} />
+            <SkillIcon path={sk19} />
+            <SkillIcon path={sk20} />
+            <SkillIcon path={sk21} />
           </div>
         </Div>
 

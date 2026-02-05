@@ -1,20 +1,18 @@
 import React from 'react'
 import Wrapper from './Wrapper'
-import gmailIcon from '../assets/email-icon.png'
+import portrait from '../assets/my-notion-face-portrait.png'
 
 const Footer = () => {
   return (
     <footer className='bg-offwhite border-t border-lightgray' role="contentinfo">
       <Wrapper>
-        <div className='flex flex-col gap-8 py-10 md:py-12'>
-          <div className='flex flex-col md:flex-row items-center justify-between gap-6'>
-            <a
-              href='mailto:rohitchand.work@gmail.com'
-              className='flex items-center gap-2 text-xs md:text-sm text-gray hover:text-black transition-colors duration-300 break-all md:break-normal'
-            >
-              <img src={gmailIcon} alt='Email icon' className='w-4 h-4 opacity-60 flex-shrink-0' aria-hidden="true" />
-              <span className="truncate">rohitchand.work@gmail.com</span>
-            </a>
+        <div className='flex flex-col md:flex-row items-center justify-between gap-6 py-10 md:py-12'>
+            <div className='flex items-center gap-2 text-xs md:text-sm text-gray flex-wrap justify-center md:justify-start'>
+              <img src={portrait} alt="" className='w-8 h-8 rounded-full object-cover flex-shrink-0' aria-hidden="true" />
+              <span className="font-medium text-black">Rohit Chand</span>
+              <span className="text-gray">·</span>
+              <span>© {new Date().getFullYear()} Rohit Chand. All rights reserved.</span>
+            </div>
             
             <div className='flex items-center gap-4'>
               <a
@@ -62,13 +60,6 @@ const Footer = () => {
                 </svg>
               </a>
             </div>
-          </div>
-
-          <div className='flex flex-col md:flex-row items-center justify-center gap-4 pt-6 border-t border-lightgray'>
-            <div className='text-xs md:text-sm text-gray'>
-              © {new Date().getFullYear()} Rohit Chand. All rights reserved.
-            </div>
-          </div>
         </div>
       </Wrapper>
     </footer>
