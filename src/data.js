@@ -113,7 +113,7 @@ export const experiences = [
   },
   {
     id: 2,
-    company: "Qrios",
+    company: "QriosX",
     role: "Frontend Developer",
     period: "September 2025 - December 2025",
     location: "Remote",
