@@ -20,7 +20,7 @@ const AboutMe = () => {
                 <div className="max-w-3xl space-y-6 md:space-y-8 lg:space-y-10 px-5 md:px-0">
                     <Div>
                         <p className="text-base md:text-lg lg:text-xl text-gray leading-relaxed">
-                            I am Rohit Chand, a Software Engineer based in Delhi, India. I build scalable web applications and backend systems using React.js, Next.js, Node.js, and modern databases—strong in modular architectures, performance tuning, and real-time data workflows. I work across the stack on API design, system integration, and production-ready features in fast-paced environments.
+                            I am Rohit Chand, a Software Engineer based in Delhi, India. I build scalable web applications and backend systems using React.js, Next.js, Node.js, and modern databases, with strengths in modular architectures, performance tuning, and real-time data workflows. I work across the stack on API design, system integration, and production-ready features in fast-paced environments.
                         </p>
                     </Div>
 
@@ -32,7 +32,7 @@ const AboutMe = () => {
 
                     <Div>
                         <p className="text-base md:text-lg lg:text-xl text-gray leading-relaxed">
-                            I am pursuing a B.Tech in Computer Science at IIIT Sonepat (7.1 CGPA). Outside of work I coordinate technical clubs and events, and I enjoy building products—from resource managers and lead tools to AI-powered cover letters and generative experiences.
+                            I am pursuing a B.Tech in Computer Science at IIIT Sonepat (7.1 CGPA). Outside of work I coordinate technical clubs and events, and I enjoy building products, from resource managers and lead tools to AI-powered cover letters and generative experiences.
                         </p>
                     </Div>
                 </div>

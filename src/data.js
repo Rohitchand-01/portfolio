@@ -30,7 +30,7 @@ export const projects = [
     image: p1,
     tags: ["fullstack", "website"],
     link: "https://linksaver.in",
-    description: "A high-performance resource manager with nested folders, drag-and-drop organization, treemap visualization, notes, and Chrome extension support—built with React and Go, plus OAuth and multi-profile workflows.",
+    description: "A high-performance resource manager with nested folders, drag-and-drop organization, treemap visualization, notes, and Chrome extension support, built with React and Go, plus OAuth and multi-profile workflows.",
     tech: ["Bun", "React", "Redux", "PostgreSQL", "GoLang", "Docker", "JWT"]
   },
   {
@@ -54,7 +54,7 @@ export const projects = [
     image: p4,
     tags: ["ai", "fullstack", "website"],
     link: "https://customcv.vercel.app/",
-    description: "An AI-powered web app that generates personalized, job-specific cover letters from user profiles and job descriptions—built with scalable class-based architecture.",
+    description: "An AI-powered web app that generates personalized, job-specific cover letters from user profiles and job descriptions, built with scalable class-based architecture.",
     tech: ["TypeScript", "MongoDB", "Node.js", "Express", "Flask", "AWS", "Framer"]
   },
   {

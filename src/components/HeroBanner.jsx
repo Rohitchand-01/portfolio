@@ -103,7 +103,7 @@ const HeroBanner = () => {
             <p className='text-base md:text-lg lg:text-xl text-gray leading-relaxed max-w-2xl'>
               Hi, I'm <span className='text-black font-medium'>Rohit Chand</span>.
               I build scalable web applications and backend systems with React.js, Next.js, Node.js,
-              and modern databases—across AI evaluation pipelines, dashboards, and production features.
+              and modern databases, across AI evaluation pipelines, dashboards, and production features.
               Based in Delhi, India. Currently at <span className='text-black font-medium'>Xelron AI</span>.
             </p>
           </motion.div>
