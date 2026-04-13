@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import Wrapper from './Wrapper'
 import { scrollTo } from '../helper'
-import resumePdf from "../assets/Rohit Chand [Software Developer].pdf"
+import resumePdf from "../assets/Rohit Chand [Software Engineer].pdf"
 import emailIcon from '../assets/email-icon.png'
 
 const GMAIL_COMPOSE_URL = 'https://mail.google.com/mail/?view=cm&fs=1&to=rohitchand.work@gmail.com'
@@ -90,7 +90,7 @@ const HeroBanner = () => {
             <h1 className='text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-display font-medium leading-[1.1] text-black mb-6 md:mb-8'>
               Software
               <br />
-              Developer
+              Engineer
             </h1>
           </motion.div>
 
@@ -101,10 +101,10 @@ const HeroBanner = () => {
             transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
           >
             <p className='text-base md:text-lg lg:text-xl text-gray leading-relaxed max-w-2xl'>
-              Hi, I'm <span className='text-black font-medium'>Rohit Chand</span>. 
-              A full-stack developer building scalable applications with modern technologies. 
-              Currently working at CodeFeast, I specialize in MERN stack development, 
-              microservices architecture, and performance optimization.
+              Hi, I'm <span className='text-black font-medium'>Rohit Chand</span>.
+              I build scalable web applications and backend systems with React.js, Next.js, Node.js,
+              and modern databases—across AI evaluation pipelines, dashboards, and production features.
+              Based in Delhi, India. Currently at <span className='text-black font-medium'>Xelron AI</span>.
             </p>
           </motion.div>
 

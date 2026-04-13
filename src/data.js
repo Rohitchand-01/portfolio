@@ -30,7 +30,7 @@ export const projects = [
     image: p1,
     tags: ["fullstack", "website"],
     link: "https://linksaver.in",
-    description: "A bookmarking and link organization platform designed to help users efficiently save, categorize, and search links and resources. Supports nested collections, tag-based search, multi-profile organization with drag and drop features & Google OAuth 2 authentication.",
+    description: "A high-performance resource manager with nested folders, drag-and-drop organization, treemap visualization, notes, and Chrome extension support—built with React and Go, plus OAuth and multi-profile workflows.",
     tech: ["Bun", "React", "Redux", "PostgreSQL", "GoLang", "Docker", "JWT"]
   },
   {
@@ -38,7 +38,7 @@ export const projects = [
     image: p2,
     tags: ["fullstack", "website"],
     link: "https://cognize.live/",
-    description: "A CRM application for freelancers with lead management, centralized storage, scraper-integrated APIs (<200ms latency), and a drag-and-drop UI for streamlined workflow management.",
+    description: "A lightweight lead-management tool with auto-summaries and lifecycle tagging to streamline sales processes, plus scraper-integrated APIs and a drag-and-drop UI.",
     tech: ["Bun.js", "TypeScript", "Next.js", "Zustand", "GoLang", "PostgreSQL", "AWS"]
   },
   {
@@ -54,7 +54,7 @@ export const projects = [
     image: p4,
     tags: ["ai", "fullstack", "website"],
     link: "https://customcv.vercel.app/",
-    description: "An AI-powered tool to create personalized cover letters tailored to each job application. Built with scalable class-based architecture.",
+    description: "An AI-powered web app that generates personalized, job-specific cover letters from user profiles and job descriptions—built with scalable class-based architecture.",
     tech: ["TypeScript", "MongoDB", "Node.js", "Express", "Flask", "AWS", "Framer"]
   },
   {
@@ -101,50 +101,62 @@ export const achievements = [
 export const experiences = [
   {
     id: 1,
-    company: "CodeFeast",
-    role: "Software Developer",
-    period: "January 2026 - Current",
-    location: "Remote",
+    company: "Xelron AI",
+    role: "Software Engineer",
+    period: "February 2026 - Present",
+    location: "Remote · Full-time",
     achievements: [
-      "Building and maintaining scalable full-stack MERN applications, optimizing database schemas to deliver ~35% performance improvements",
-      "Designing and operating RESTful microservices that handle 1,000+ daily user interactions with high reliability",
-      "Automating deployments through CI/CD pipelines using Docker and AWS, improving release speed and deployment consistency"
+      "Design and implement end-to-end AI evaluation systems, including backend services, execution pipelines, and data flow orchestration",
+      "Build and manage Docker-based infrastructure to enable scalable, reproducible, and isolated system execution",
+      "Develop automated testing frameworks in Python, improving validation accuracy, reducing manual effort, and increasing system reliability",
+      "Optimize pipeline performance and integrate internal APIs, ensuring efficient execution, seamless system communication, and production-grade reliability"
     ]
   },
   {
     id: 2,
+    company: "CodeFeast",
+    role: "Software Developer",
+    period: "December 2025 - February 2026",
+    location: "Remote · Intern",
+    achievements: [
+      "Led frontend development for client-facing and dashboard modules using React.js and Next.js, building reusable and scalable component architectures",
+      "Developed interactive dashboards with real-time data handling, implementing structured state management to ensure stable performance under continuous user interaction",
+      "Optimized rendering performance through memoization, component splitting, and efficient state updates, improving UI responsiveness across core workflows",
+      "Integrated REST APIs with proper error handling, loading states, and optimistic updates to enhance user experience",
+      "Collaborated with backend and design teams to ensure API alignment, UI consistency, and maintainable frontend architecture across projects"
+    ]
+  },
+  {
+    id: 3,
     company: "QriosX",
     role: "Frontend Developer",
-    period: "September 2025 - December 2025",
-    location: "Remote",
+    period: "September 2025 - November 2025",
+    location: "Remote · Intern",
     achievements: [
-      "Developed scalable, high-performance UIs using Next.js, ensuring responsiveness and fast load times across devices",
-      "Implemented UI/UX feedback to improve design consistency, usability, and performance",
-      "Collaborated with design team to translate Figma prototypes into pixel-perfect, functional interfaces"
+      "Developed the marketing landing page using Next.js, leveraging SSR and optimized routing for improved SEO and faster initial load performance",
+      "Built and maintained the core product dashboard using React.js, implementing reusable components and modular architecture for scalability",
+      "Converted Figma designs into pixel-perfect, fully responsive interfaces using Tailwind CSS with strict attention to spacing, typography, and layout consistency",
+      "Integrated REST APIs with proper loading states, error handling, and efficient state management to ensure smooth user interaction across the application"
     ]
   }
 ];
 
 export const skillCategories = [
   {
-    category: "Programming & Development",
-    skills: ["JavaScript", "TypeScript", "Python", "C", "C++"]
+    category: "Software Development",
+    skills: ["React.js", "Next.js", "JavaScript (ES6+)", "TypeScript", "Node.js", "Express.js", "REST APIs", "MongoDB", "PostgreSQL", "MySQL", "Prisma", "Zustand", "Redux", "Tailwind CSS", "SCSS", "Optimistic UI Rendering", "Data Structures & Algorithms"]
   },
   {
-    category: "Frontend",
-    skills: ["React.js", "Next.js", "Redux", "Vite", "TailwindCSS", "Zustand", "SCSS", "Optimistic Rendering"]
+    category: "Design-to-Code",
+    skills: ["Figma (Design Handoff)", "Responsive Design", "Component-Based Architecture", "UI/UX Implementation", "Performance Optimization", "Pixel-Perfect Layouts"]
   },
   {
-    category: "Backend & Databases",
-    skills: ["Node.js", "Express.js", "REST API", "MongoDB", "PostgreSQL", "MySQL", "SQL", "Prisma"]
+    category: "Dev Tools & Deployment",
+    skills: ["Git", "GitHub", "Docker", "Vercel", "Netlify", "Postman", "AWS (EC2, EBS)"]
   },
   {
-    category: "Dev Tools & Platforms",
-    skills: ["Git", "GitHub", "Vercel", "Netlify", "Postman"]
-  },
-  {
-    category: "DevOps & Cloud",
-    skills: ["Docker", "AWS", "CI/CD"]
+    category: "Additional",
+    skills: ["Microservices (REST-based)", "API Integration", "Agile Development", "Clean Code", "Performance Optimization"]
   }
 ];
 

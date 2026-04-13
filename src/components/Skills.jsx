@@ -51,7 +51,7 @@ const Skills = () => {
             <div className="w-16 h-px bg-black"></div>
           </Div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 md:gap-x-8 lg:gap-x-12 xl:gap-x-16 gap-y-8 md:gap-y-12 lg:gap-y-16 px-5 md:px-0'>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-x-6 md:gap-x-8 lg:gap-x-12 xl:gap-x-16 gap-y-8 md:gap-y-12 lg:gap-y-16 px-5 md:px-0'>
             {skillCategories.map((category, index) => (
               <Div key={index} className="space-y-4 md:space-y-5">
                 <h4 className="text-sm md:text-base lg:text-lg font-medium text-black tracking-tight">

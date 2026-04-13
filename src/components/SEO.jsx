@@ -7,7 +7,7 @@ const SEO = () => {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Rohit Chand",
-      "jobTitle": "Full-Stack Developer",
+      "jobTitle": "Software Engineer",
       "url": "https://rohitchand.dev",
       "email": "rohitchand.work@gmail.com",
       "telephone": "+91-9958896911",
@@ -41,13 +41,13 @@ const SEO = () => {
       ],
       "worksFor": {
         "@type": "Organization",
-        "name": "CodeFeast"
+        "name": "Xelron AI"
       },
       "sameAs": [
-        "https://github.com/rohitchand",
-        "https://linkedin.com/in/rohitchand"
+        "https://github.com/Rohitchand-01",
+        "https://www.linkedin.com/in/rohitchand01/"
       ],
-      "description": "Full-stack developer specializing in MERN stack, React, Next.js, and modern web technologies. Building scalable applications with 50+ projects completed."
+      "description": "Software Engineer building scalable web applications and backend systems with React.js, Next.js, Node.js, and modern databases. Experience in AI evaluation systems, dashboards, and production-ready features."
     };
 
     const portfolioData = {
@@ -74,7 +74,7 @@ const SEO = () => {
         "@type": "Person",
         "name": "Rohit Chand"
       },
-      "description": "Full-stack developer portfolio showcasing projects, skills, and experience"
+      "description": "Software engineer portfolio showcasing projects, skills, and experience"
     };
 
     const projectItems = projects.map(project => ({
